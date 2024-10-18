@@ -1,2 +1,2 @@
-ffmpeg -i '视频文件名称' -c:v h264 -flags +cgop -g 30 -hls_time 5 -hls_list_size 0 -hls_segment_filename index%3d.ts 'index.m3u8'
+ffmpeg -c:v h264_cuvid -i '视频文件名称' -c:v h264_nvenc -b:v 10000k -flags +cgop -g 30 -hls_time 5 -hls_list_size 0 -hls_segment_filename index%3d.ts 'index.m3u8'
 https://cdn.jsdelivr.net/gh/用户名/仓库名/文件夹名/index.m3u8
